@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nemi Desai">
+<meta name="dcterms.date" content="2024-08-02">
+<meta name="description" content="This post analyzes trends in jail deaths that occur in the United States from 2008 to 2019.">
 
-<title>project – Jail Deaths in US</title>
+<title>Jail Deaths in the United States – Jail Deaths in US</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,12 +147,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Jail Deaths in the United States</h1>
+                  <div>
+        <div class="description">
+          This post analyzes trends in jail deaths that occur in the United States from 2008 to 2019.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Nemi Desai </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 2, 2024</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">August 4, 2024</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
+
 
 
 
@@ -182,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="number-of-deaths-per-year" class="level3">
 <h3 class="anchored" data-anchor-id="number-of-deaths-per-year">Number of Deaths Per Year</h3>
 <p>In order to begin answering this question, it is important to explore trends in jail deaths. Using the dataset provided in sources, we can determine the number of annual deaths to help form conclusions.</p>
-<div id="cell-2" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.476522Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.594122Z&quot;}" data-execution_count="278">
+<div id="cell-3" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.476522Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.594122Z&quot;}" data-execution_count="278">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -213,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="cause-of-death" class="level3">
 <h3 class="anchored" data-anchor-id="cause-of-death">Cause of Death</h3>
 <p>There are a lot of reasons why jail deaths may occur, and knowing what happened may help us recognize trends that are forming in relation to these deaths.</p>
-<div id="cell-5" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.581308Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.659377Z&quot;}" data-execution_count="279">
+<div id="cell-6" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.581308Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.659377Z&quot;}" data-execution_count="279">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cause_counts <span class="op">=</span> df[<span class="st">'cause_short'</span>].value_counts().sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
@@ -237,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>About 1 in 10 deaths occur due to drug and alcohol, suggesting substance abuse issues among the incarcerated population and the need for effective substance abuse treatment programs.</p>
 <p>Homicides and accidents account for fewer deaths but are still significant. This points to safety and violence issues within jails. A small number of deaths are undetermined, indicating that some cases lack clear conclusions, which may warrant further investigation.</p>
 <p>In order to delve more into the trends of increases in deaths over the years, as well as cause of death, we can combine both to visualize more similarities.</p>
-<div id="cell-7" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.661901Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.833814Z&quot;}" data-execution_count="280">
+<div id="cell-8" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.661901Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.833814Z&quot;}" data-execution_count="280">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cause_year_counts <span class="op">=</span> df.groupby([<span class="st">'year'</span>, <span class="st">'cause_short'</span>]).size().unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>total_deaths_per_year <span class="op">=</span> cause_year_counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>percentage_cause_year <span class="op">=</span> cause_year_counts.divide(total_deaths_per_year, axis<span class="op">=</span><span class="dv">0</span>) <span class="op">*</span> <span class="dv">100</span></span>
@@ -268,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="deaths-by-gender" class="level3">
 <h3 class="anchored" data-anchor-id="deaths-by-gender">Deaths by Gender</h3>
 <p>In order to get more information on significant patterns and disparities in jail deaths, we can explore the deaths in relation to gender.</p>
-<div id="cell-10" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.846619Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.977151Z&quot;}" data-execution_count="281">
+<div id="cell-11" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.846619Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:49.977151Z&quot;}" data-execution_count="281">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gender_counts <span class="op">=</span> df[<span class="st">'gender'</span>].value_counts()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
@@ -285,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The pie chart above shows that an overwhelming majority of jail deaths occur among men (87.2%), with women accounting for 12.7% of the deaths. Women make up 6.4% of individuals in jail, yet they make almost 12.7% of the deaths in jails, double the death rate compared to occupancy. Let us delve mor e into the causes to help with any conclusions.</p>
-<div id="cell-12" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.891114Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.045958Z&quot;}" data-execution_count="282">
+<div id="cell-13" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:49.891114Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.045958Z&quot;}" data-execution_count="282">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cause_gender_counts <span class="op">=</span> df.groupby([<span class="st">'gender'</span>, <span class="st">'cause_short'</span>]).size().unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>total_deaths_per_gender <span class="op">=</span> cause_gender_counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>percentage_cause_gender <span class="op">=</span> cause_gender_counts.divide(total_deaths_per_gender, axis<span class="op">=</span><span class="dv">0</span>) <span class="op">*</span> <span class="dv">100</span></span>
@@ -315,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="deaths-by-race" class="level3">
 <h3 class="anchored" data-anchor-id="deaths-by-race">Deaths by Race</h3>
 <p>Let us explore deaths by race for further analysis.</p>
-<div id="cell-14" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.037909Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.158474Z&quot;}" data-execution_count="283">
+<div id="cell-15" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.037909Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.158474Z&quot;}" data-execution_count="283">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>racial_counts <span class="op">=</span> df[<span class="st">'race'</span>].value_counts()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
@@ -339,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>According to the data, White individuals account for the highest percentage of jail deaths at 53.5%, followed by Black individuals at 30.9%. Hispanic individuals constitute 12.8% of the deaths, while other racial groups such as Asian, American Indian, and Pacific Islander make up smaller percentages. This distribution underscores the disproportionate impact of jail deaths on White and Black populations, suggesting potential underlying systemic issues that require further investigation.</p>
-<div id="cell-16" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.098725Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.269214Z&quot;}" data-execution_count="284">
+<div id="cell-17" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.098725Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.269214Z&quot;}" data-execution_count="284">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cause_race_counts <span class="op">=</span> df.groupby([<span class="st">'race'</span>, <span class="st">'cause_short'</span>]).size().unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>total_deaths_per_race <span class="op">=</span> cause_race_counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
@@ -369,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="deaths-by-custody-status" class="level3">
 <h3 class="anchored" data-anchor-id="deaths-by-custody-status">Deaths by Custody Status</h3>
-<div id="cell-18" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.268594Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.465201Z&quot;}" data-execution_count="285">
+<div id="cell-19" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.268594Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.465201Z&quot;}" data-execution_count="285">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>custody_counts <span class="op">=</span> df[<span class="st">'custody_status'</span>].value_counts()</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
@@ -386,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The pie chart indicates that a substantial majority (79.1%) of deaths occur out-of-custody, while only 20.9% occur in-custody. This suggests a heightened risk for individuals during the transition periods immediately before or after custody, underscoring the need for enhanced support and intervention during these critical times.</p>
-<div id="cell-20" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.394705Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.546639Z&quot;}" data-execution_count="286">
+<div id="cell-21" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.394705Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.546639Z&quot;}" data-execution_count="286">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>cause_custody_counts <span class="op">=</span> df.groupby([<span class="st">'custody_status'</span>, <span class="st">'cause_short'</span>]).size().unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>total_deaths_per_state <span class="op">=</span> cause_custody_counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
@@ -417,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="death-by-age" class="level3">
 <h3 class="anchored" data-anchor-id="death-by-age">Death by Age</h3>
-<div id="cell-22" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.522205Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.645329Z&quot;}" data-execution_count="287">
+<div id="cell-23" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.522205Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:50.645329Z&quot;}" data-execution_count="287">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">'age'</span>])</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'age'</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">'age'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
@@ -439,7 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The chart above, depicting the distribution of ages at death, shows a concentration of deaths among individuals between the ages of 15 and 95. The highest number of deaths occurs between ages 40 and 60, with a noticeable peak in the late-40s. This suggests that middle-aged individuals in jails are particularly vulnerable, which may be due to a combination of factors, including underlying health issues, stress, and inadequate medical care.</p>
-<div id="cell-24" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.606010Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:51.031636Z&quot;}" data-execution_count="288">
+<div id="cell-25" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:50.606010Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:51.031636Z&quot;}" data-execution_count="288">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>cause_age_counts <span class="op">=</span> df.groupby([<span class="st">'age'</span>, <span class="st">'cause_short'</span>]).size().unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>total_deaths_per_age <span class="op">=</span> cause_age_counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
@@ -472,7 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="media-coverage-of-jail-deaths" class="level3">
 <h3 class="anchored" data-anchor-id="media-coverage-of-jail-deaths">Media Coverage of Jail Deaths</h3>
 <p>When covering jail deaths, the media showcases information that provides valuable insights into how these events are represented in the public discourse. Using nltk, a bar chart showing the most common words is shown below.</p>
-<div id="cell-27" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:51.034546Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:51.233077Z&quot;}" data-execution_count="289">
+<div id="cell-28" class="cell" data-executetime="{&quot;start_time&quot;:&quot;2024-08-04T22:01:51.034546Z&quot;,&quot;end_time&quot;:&quot;2024-08-04T22:01:51.233077Z&quot;}" data-execution_count="289">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.tokenize <span class="im">import</span> word_tokenize</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.probability <span class="im">import</span> FreqDist</span>
